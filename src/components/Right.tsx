@@ -1,7 +1,8 @@
 import React from 'react';
 
 interface Props {
-  profile: profileData
+  profile: profileData,
+  // scrollDownFunction: ScrollDown,
 }
 
 export const Right: React.FC<Props> = (props) => {
@@ -9,8 +10,8 @@ export const Right: React.FC<Props> = (props) => {
   const {profile} = props
   
     return (
-        <div className="split right">
-          <div className="right-inner centered">
+        <div className="right">
+          <div className="right-inner">
             <div className="introduction">
               <h4>Intro</h4>
               <div className="content">

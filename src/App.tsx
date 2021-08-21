@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { Left } from "./components/Left";
 import { Right } from "./components/Right";
@@ -13,9 +13,20 @@ const profileData = {
 }
 
 function App() {
+  const [showScroll, setShowScroll] = useState(true);
+
+  const scrollDownFunction = () => {
+    const y = window.scrollY;
+    if (y <= 2) {
+      setShowScroll(true);
+    } else if (y > 2) {
+      setShowScroll(false);
+    }
+  }
+
   return (
     <div className="App">
-      <Left profile={profileData} />
+      <Left profile={profileData} showScroll={showScroll} scrollDownFunc={scrollDownFunction} />
       <Right profile={profileData} />
     </div>
   );

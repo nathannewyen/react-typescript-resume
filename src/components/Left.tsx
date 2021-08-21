@@ -1,15 +1,24 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaAngleDown } from "react-icons/fa";
 
 interface Props {
-    profile: profileData
+    profile: profileData,
+    showScroll: boolean,
+    scrollDownFunc: ScrollDown
 }
 
 export const Left: React.FC<Props> = (props) => {
-    const {profile} = props;
-    
+    const { profile, showScroll, scrollDownFunc} = props;
+
     return (
-        <div className="split left">
+        <div className="split left" onWheelCapture={scrollDownFunc}>
+            {showScroll === true && (
+                <div className="field">
+                    <div className="scroll">
+                        <FaAngleDown className="icon" />
+                    </div>
+                </div>
+            )}
             <div className="bg-img"></div>
             <div className="left-inner centered">
                 <div className="info">

@@ -1,11 +1,50 @@
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
+.field {
+	align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: calc(100%/2.35) ;
+}
+
+.scroll {
+	width: 60px;
+	height: 60px;
+	border: 1.5px solid #fff;
+	border-radius: 50%;
+	position: relative;
+	animation: down 1.5s infinite;
+  display: inline-block;
+	-webkit-animation: down 1.5s infinite;
   z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+}
+
+.scroll .icon {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(10px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
 }
 
 .left,
@@ -13,6 +52,10 @@
   width: 50%;
   display: inline-block;
   vertical-align: top;
+}
+
+.right {
+  margin-top: 22rem;
 }
 
 .left {
@@ -25,9 +68,40 @@
   position: fixed;
 }
 
+.left .bg-img {
+  background: url('./img/Nhan.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.left .bg-img:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #185a9d;
+  background-image: linear-gradient(to left top, #43cea2 , #185a9d);
+  opacity: 0.85;
+}
+
 .left-inner,
 .right-inner {
   padding: 50px;
+}
+
+@media screen and (max-width: 400px) {
+  .left-inner,
+  .right-inner {
+    padding: 40px;
+  }
 }
 
 .left-inner {
@@ -56,57 +130,42 @@
   margin-top: 50%;
 }
 
-/* Control the right side */
-.right {
-  right: 0;
+@media screen and (max-width: 1000px) {
+  .left .info {
+    margin-top: 300px;
+  }
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
+.left .info .name {
+  font-weight: 500;
 }
 
-.left .bg-img {
-  background: url('./img/Nhan.jpg') center center no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.left .bg-img:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #185a9d;
-  background-image: linear-gradient(to left top, #43cea2 , #185a9d);
-  opacity: 0.85;
-}
-
-.left .social-links {
+.left .info .social-links {
   margin-top: 30px;
 }
 
-.left .fa {
+.left .info .fa {
   margin: 10px;
   font-size: 24px;
   color: #fff;
 }
 
-.right a {
-  color: #000;
+@media screen and (max-width: 1000px) {
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
+  .left {
+    position: static;
+  }
 }
 
-.right .introduction, .skills, .education, .experience {
-  display: grid;
-  grid-template-columns: 1.3fr 5fr;
+.right {
+  float: right;
+}
+
+.right a {
+  color: #000;
 }
 
 .right h4,
@@ -116,6 +175,7 @@ a {
 }
 
 .right h4 {
+  width: 20%;
   margin: 0 0 20px;
   text-transform: uppercase;
   font-size: 14px;
@@ -132,10 +192,21 @@ a {
 }
 
 .right .content {
+  width: 80%;
   padding: 0;
   margin: 0 0 50px;
   font-weight: 300;
   line-height: 1.5;
+}
+
+
+@media screen and (max-width: 600px) {
+  .right h4,
+  .right .content {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+  }
 }
 
 .right .content ul.description {
@@ -181,12 +252,9 @@ a {
   font-size: 16px;
 }
 
-.right .education .college, .bootcamp {
+.right .education .college {
   font-weight: 700;
   font-style: italic;
-}
-
-.right .education .bootcamp {
   margin-bottom: 10px;
 }
 
@@ -240,6 +308,12 @@ a {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 340px) {
+  .right .experience .exp-item .duration {
+    float: none;
+  }
+}
+
 .right .experience .exp-item .title {
   font-weight: 700;
   font-style: italic;
@@ -256,22 +330,6 @@ a {
 .right .projects .project-desc {
   font-size: 15px;
   margin: 0 0 10px;
-}
-
-.right a.resume {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 15px 0px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.right a.resume:hover {
-  background-color: #f1f1f1;
 }
 
 .right a.resume {

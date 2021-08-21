@@ -6,3 +6,5 @@ interface profileData {
     linkedinURL: string,
     resumeURL: string
 }
+
+type ScrollDown = () => void;
