@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Left } from "./components/Left";
+import { Right } from "./components/Right";
+
+const profileData = {
+  name: "Hey, I'm Nhan Nguyen",
+  subtext: "Developer based in Dallas, TX",
+  jobStatus: "Software Engineer @ CMINDLLC",
+  githubURL: 'https://github.com/nathannewyen',
+  linkedinURL: 'https://www.linkedin.com/in/nhannguyen3112',
+  resumeURL: 'https://nathan-v1.netlify.app/resume.pdf'
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Left profile={profileData} />
+      <Right profile={profileData} />
     </div>
   );
 }

@@ -1,0 +1,33 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "plugin:react/recommended",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": [
+            "error",
+            {
+              "forbid": [">", "}"]
+            }
+          ],
+          "react/jsx-no-target-blank": [0, {
+            "allowReferrer": false,
+            "enforceDynamicLinks": "never",
+            "links": true,
+            "forms": false
+          }]
+    }
+}
