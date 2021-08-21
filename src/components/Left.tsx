@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { FaGithub, FaLinkedin, FaAngleDown } from "react-icons/fa";
 
 interface Props {
@@ -8,11 +8,19 @@ interface Props {
 }
 
 export const Left: React.FC<Props> = (props) => {
-    const { profile, showScroll, scrollDownFunc} = props;
+    const { profile, showScroll, scrollDownFunc } = props;
+    
+    const [mobileScroll, setMobileScroll] = useState(true)
+
+    useEffect(() => {
+        if (window.innerWidth > 600) {
+            setMobileScroll(false)
+        }
+    }, [])
 
     return (
         <div className="split left" onWheelCapture={scrollDownFunc}>
-            {showScroll === true && (
+            {showScroll === true && mobileScroll === true && (
                 <div className="field">
                     <div className="scroll">
                         <FaAngleDown className="icon" />
