@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <Left profile={profileData} showScroll={showScroll} scrollDownFunc={scrollDownFunction} />
       <Right profile={profileData} />
     </div>

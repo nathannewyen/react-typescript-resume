@@ -19,7 +19,7 @@ export const Left: React.FC<Props> = (props) => {
     }, [])
 
     return (
-        <div className="split left" onWheelCapture={scrollDownFunc} onTouchMove={scrollDownFunc}>
+        <div className="left" onWheelCapture={scrollDownFunc} onTouchMove={scrollDownFunc}>
             {showScroll === true && mobileScroll === true && (
                 <div className="field">
                     <div className="scroll">
@@ -28,14 +28,14 @@ export const Left: React.FC<Props> = (props) => {
                 </div>
             )}
             <div className="bg-img"></div>
-            <div className="left-inner centered">
+            <div className="left-inner">
                 <div className="info">
-                <h2 className="name">{profile.name}</h2>
-                <div className="subtext">{profile.subtext}</div>
-                <div className="jobStatus">{profile.jobStatus}</div>
-                <div className="social-links">
-                    <a href={profile.githubURL}><FaGithub className="fa" /></a>
-                    <a href={profile.linkedinURL}><FaLinkedin className="fa" /></a>
+                    <h2 className="name">{profile.name}</h2>
+                    <div className="subtext">{profile.subtext}</div>
+                    <div className="jobStatus">{profile.jobStatus}</div>
+                    <div className="social-links">
+                        <a href={profile.githubURL}><FaGithub className="fa" /></a>
+                        <a href={profile.linkedinURL}><FaLinkedin className="fa" /></a>
                     </div>
                 </div>
             </div>

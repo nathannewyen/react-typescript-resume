@@ -1,50 +1,15 @@
-.field {
-	align-items: center;
-  position: absolute;
-  bottom: 20px;
-  left: calc(100%/2.35) ;
+html, body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
+  letter-spacing: 0.3px;
 }
 
-.scroll {
-	width: 60px;
-	height: 60px;
-	border: 1.5px solid #fff;
-	border-radius: 50%;
-	position: relative;
-	animation: down 1.5s infinite;
-  display: inline-block;
-	-webkit-animation: down 1.5s infinite;
-  z-index: 1;
-}
-
-.scroll .icon {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-@keyframes down {
-	0% {
-		transform: translate(0);
-	}
-	20% {
-		transform: translateY(10px);
-	}
-	40% {
-		transform: translate(0);
-	}
-}
-
-@-webkit-keyframes down {
-	0% {
-		transform: translate(0);
-	}
-	20% {
-		transform: translateY(15px);
-	}
-	40% {
-		transform: translate(0);
-	}
+a {
+  text-decoration: none;
 }
 
 .left,
@@ -52,11 +17,6 @@
   width: 50%;
   display: inline-block;
   vertical-align: top;
-}
-@media screen and (max-width: 1000px) {
-  .right {
-    margin-top: 22rem;
-  }
 }
 
 .left {
@@ -155,9 +115,11 @@
   .left, .right {
     display: block;
     width: 100%;
+    height: 100vh;
   }
+
   .left {
-    position: static;
+    position: relative;
   }
 }
 
@@ -256,9 +218,6 @@
 .right .education .college {
   font-weight: 700;
   font-style: italic;
-}
-
-.right .education .bootcamp {
   margin-bottom: 10px;
 }
 
