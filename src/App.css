@@ -53,7 +53,7 @@
   display: inline-block;
   vertical-align: top;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
   .right {
     margin-top: 22rem;
   }
