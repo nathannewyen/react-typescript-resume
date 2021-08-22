@@ -53,9 +53,10 @@
   display: inline-block;
   vertical-align: top;
 }
-
-.right {
-  margin-top: 22rem;
+@media screen and (max-width: 400px) {
+  .right {
+    margin-top: 22rem;
+  }
 }
 
 .left {
@@ -255,6 +256,9 @@
 .right .education .college {
   font-weight: 700;
   font-style: italic;
+}
+
+.right .education .bootcamp {
   margin-bottom: 10px;
 }
 

@@ -17,9 +17,9 @@ function App() {
 
   const scrollDownFunction = () => {
     const y = window.scrollY;
-    if (y <= 2) {
+    if (y <= 3) {
       setShowScroll(true);
-    } else if (y > 2) {
+    } else if (y > 3) {
       setShowScroll(false);
     }
   }

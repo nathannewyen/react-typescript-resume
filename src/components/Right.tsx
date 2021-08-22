@@ -45,9 +45,9 @@ export const Right: React.FC<Props> = (props) => {
           <div className="education">
                 <h4>Education</h4>
                 <div className="content">
-                  <div className="university"><a href="http://www.northeastern.edu/" target="_blank">University of Texas at Arlington</a></div>
-                  <div className="college"><a href="http://www.ccis.northeastern.edu/" target="_blank">Tarrant County College</a></div>
-                  <div className="conc bootcamp"><a href="http://www.ccis.northeastern.edu/" target="_blank">Coding Dojo</a></div>
+                  <div className="university"><a href="https://www.uta.edu/" target="_blank">University of Texas at Arlington</a></div>
+                  <div className="college"><a href="http://www.tccd.edu/" target="_blank">Tarrant County College</a></div>
+                  <div className="conc college bootcamp"><a href="http://www.codingdojo.com/" target="_blank">Coding Dojo</a></div>
                   <div className="major"><strong>Major:</strong> Computer Science</div>
                   <div className="minor"><strong>Minor:</strong> Graphic Design</div>
                   <div className="grad-date">Graduation: June 2020</div>
@@ -70,7 +70,7 @@ export const Right: React.FC<Props> = (props) => {
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">The TX Studio</a>
+                      <a className="company" href="http://thetxstudio.com/" target="_blank">The TX Studio</a>
                       <div className="duration">October 2020 &mdash; Dec 2020</div>
                     </div>
                     <div className="title">Intern Creative Technologist Co-op</div>
@@ -82,7 +82,7 @@ export const Right: React.FC<Props> = (props) => {
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">TeammateMe</a>
+                      <a className="company" href="http://www.teammateme.com/" target="_blank">TeammateMe</a>
                       <div className="duration">March 2021 &mdash; Present</div>
                     </div>
                     <div className="title">Full Stack Software Engineer</div>
@@ -94,7 +94,7 @@ export const Right: React.FC<Props> = (props) => {
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">CMINDLLC</a>
+                      <a className="company" href="http://www.cmindllc.com/" target="_blank">CMINDLLC</a>
                       <div className="duration">August 2021 &mdash; Present</div>
                     </div>
                     <div className="title">Full Stack Software Engineer</div>

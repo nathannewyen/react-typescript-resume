@@ -19,7 +19,7 @@ export const Left: React.FC<Props> = (props) => {
     }, [])
 
     return (
-        <div className="split left" onWheelCapture={scrollDownFunc}>
+        <div className="split left" onWheelCapture={scrollDownFunc} onTouchMove={scrollDownFunc}>
             {showScroll === true && mobileScroll === true && (
                 <div className="field">
                     <div className="scroll">
