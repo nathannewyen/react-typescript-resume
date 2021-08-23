@@ -105,6 +105,27 @@ export const Right: React.FC<Props> = (props) => {
                   </div>
                 </div>
           </div>
+          <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="http://nathan-v1.netlify.app/" target="_blank">nathan-v1.netlify.app</a>
+                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="http://heroku-spotify-project.herokuapp.com/">Spotify</a>
+                    <p className="project-desc">Web app built on the MEAN (MongoDB, Express, Angular, Node). A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="http://nuwit.ccs.neu.edu/" target="_blank">The Beuter</a>
+                    <p className="project-desc">Full stack web app utilizing MongoDB OOP for the database. A commerce web app for clothing store, I am using Node.js, Express, Mongodb and React to create this project and using Styled Components for layout and design.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="http://teammateme.com/" target="_blank">TeammateMe</a>
+                    <p className="project-desc">TeammateMe helps users find and create teams for their course, projects, classes, and extracurricular activities. Also, it helps them gain professional experience and sharpen their teamwork skills. At the same time, they can build lasting reputation scores for their resume.git</p>
+                  </div>
+                </div>
+              </div>
           <a className="resume" href={profile.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
           </div>
         </div>
